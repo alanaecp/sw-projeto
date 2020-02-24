@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="py-4">Lista de Efemérides</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Dia</th>
+      <th scope="col">Mês</th>
+      <th scope="col">Ano</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in efemerides %}
+
+    <tr>
+      <th scope="row">{{data.id}}</th>
+      <td>{{data.descricao}}</td>
+      <td>{{data.dia}}</td>
+      <td>{{data.mes}}</td>
+      <td>{{data.ano_primeira_ocorrencia}}</td>
+      <td><a href="#" class="btn btn-primary">Editar</a> | <a href="#"class="btn btn-danger">Excluir</a></td>
+    </tr>
+    {% endfor%}
+
+
+  </tbody>
+</table>
+
+
+{% endblock %}
