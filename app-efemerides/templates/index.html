@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Hoje</h1>
+  <ul>
+    {% for texto in data_em_texto %}
+    <li>{{texto}}</li>
+    {% endfor %}
+  </ul>
+  <h1>Efemérides</h1>
+
+
+    {% if efemerides %}
+    <ul>
+      {% for texto in efemerides %}
+      <li>{{texto}}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+      Nenhuma efemerides cadastrada para o dia de hoje
+    </div>
+    {% endif %}
+
+{% endblock %}

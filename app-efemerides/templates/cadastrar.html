@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form class="col-md-6" method="POST" action="/cadastrar">
+    {{ form.hidden_tag() }}
+    {{ form.descricao.label }} {{ form.descricao(class_="form-control") }}
+    {{ form.dia.label }} {{ form.dia(class_="form-control") }}
+    {{ form.mes.label }} {{ form.mes(class_="form-control") }}
+    {{ form.ano_primeira_ocorrencia.label }} {{ form.ano_primeira_ocorrencia(class_="form-control") }}
+    <hr>
+    <button class="btn btn-primary" type="submit" name="button">Cadastrar</button>
+
+</form>
+
+{% endblock %}
